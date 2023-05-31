@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+header{
+	display:flex;
+	padding:10px 20px;
+	justify-content:space-around;
+}
+ul{
+	list-style:none;
+	display:flex;
+	gap:25px;
+}
+li{
+	cursor:default;
+}
