@@ -4,21 +4,21 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
+import db.DBdata;
+
 import java.sql.ResultSet;
 
 
 public class UserDAO {
 	private Connection conn;
-	private static final String UID = "coren";
-	private static final String UPW = "coren";
-	private static final String URL = "jdbc:mysql://localhost:3306/bbs";
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	
 	public UserDAO() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn = DriverManager.getConnection(URL, UID, UPW);
+			conn = DriverManager.getConnection(DBdata.getUrl(), DBdata.getUid(), DBdata.getUpw());
 		} catch(Exception e) {
 			e.printStackTrace();
 			try {

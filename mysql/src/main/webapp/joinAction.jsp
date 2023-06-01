@@ -22,26 +22,15 @@
 			user.getUserPassword() == null || 
 			user.getUserEmail() == null || 
 			user.getUserName() == null || 
-			user.getUserGender() ==null){
-			
-			script.println("<script>");
-			script.println("alert('누락된 정보가 있습니다')");
-			script.println("history.back()");
-			script.println("</script>");
+			user.getUserGender() == null){
+			script.println("<script> alert('누락된 정보가 있습니다'); history.back(); </script>");
 		} else{
-			 
 			UserDAO userDAO = new UserDAO();
 			int result = userDAO.join(user);
 			if(result == -1){
-				script.println("<script>");
-				script.println("alert('이미 존재하는 아이디입니다.')");
-				script.println("history.back()");
-				script.println("</script>");
+				script.println("<script> alert('이미 존재하는 아이디입니다.'); history.back(); </script>");
 			} else {
-				script.println("<script>");
-				script.println("alert('회원가입이 완료되었습니다.')");
-				script.println("location.href='login.jsp'");
-				script.println("</script>");
+				script.println("<script> alert('회원가입이 완료되었습니다.'); location.href='login.jsp'; </script>");
 			}
 	
 	}

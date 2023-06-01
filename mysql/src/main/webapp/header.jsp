@@ -11,10 +11,10 @@
 <body>
 	<header>
 		<div>
-			<span>로고</span>
+			<span><a href="main.jsp">로고</a> </span>
 		</div>
 		<ul>
-			<li>메뉴1</li>
+			<li><a href='bbs.jsp?pageNumber=1'>메뉴1</a></li>
 			<li>메뉴2</li>
 			<li>메뉴3</li>
 			<li>메뉴4</li>

@@ -4,16 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="./common.css" rel="stylesheet" type="text/css">
+<link href="./assets/css/login.css" rel="stylesheet" type="text/css">
 <title>Insert title here</title>
 
 </head>
 <jsp:include page="header.jsp" />
 <body>
-	<div>
+	<div class='wrap'>
 		<%
-		String userID = null;
-		userID = (String)session.getAttribute("userID");
+			String userID = null;
+			userID = (String)session.getAttribute("userID");
 		%>
 		<form action="loginAction.jsp" method="post">
 		<% if(userID != null){ %>
@@ -27,8 +27,11 @@
 			<label for="userPassword">
 				<span>비밀번호</span><input type="text" name="userPassword" id="userPassword">
 			</label>
-			<button type="submit" value="로그인">로그인</button>
-			<a href="join.jsp">회원가입</a>
+			<div>
+				<button type="submit" value="로그인">로그인</button>
+				<a href="join.jsp">회원가입</a>
+			</div>
+			
 		<% } %>
 		</form>
 	</div>
